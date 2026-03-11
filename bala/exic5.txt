@@ -1,0 +1,83 @@
+Script started on Mon 08 Sep 2025 11:53:22 AM IST
+[?1034h[23bee033@mepcolinux ~]$cat frndfun.cpp
+#include<iostream>
+using namespace std;
+class Distance
+{
+   int feet,inch;
+   public:
+   Distance(int x,int y)
+   {
+      feet=x;
+      inch=y;
+   }
+   friend void add(Distance s1 ,Distance s2);
+   };
+void add(Distance s1, Distance s2)
+{
+ int feet1=s1.feet + s2.feet;
+ int inch1=s1.inch + s2.inch;
+ feet1=feet1+(inch1/12);
+ if((inch1/12)>=1)
+ {
+    inch1=inch1%12;
+ }
+ cout<<"The added value is:"<<feet1<<"'"<<inch1;
+}
+int main()
+{
+ Distance x1(4,2);
+ Distance x2(5,3);
+ add(x1,x2);
+ return 0;
+}
+[23bee033@mepcolinux ~]$c++ fri[Kndfun.cpp
+[23bee033@mepcolinux ~]$./a.out
+The added value is:9'5[23bee033@mepcolinux ~]$cat frnd[K[K[Kndcls[Kass.cpp
+#include<iostream>
+using namespace std;
+class A
+{
+   int x;
+   public:
+   A(int i)
+   {
+     x=i;
+   }
+   friend class B;
+};
+class B
+{
+   int y;
+   public:
+   B(int j)
+   {
+      y=j;
+   }
+   void maxavg()
+   {
+      A obj1(10);
+      int avg=(obj1.x + y)/2;
+      cout<<"The average of two nos is "<<avg<<"\n";
+      if(obj1.x > y)
+      {
+         cout<<"The maximum no is "<<obj1.x;
+      }
+      else
+      {
+         cout<<"The maximum no is "<<y;
+      }
+   }
+};
+int main()
+{
+   B obj2(40);
+   obj2.maxavg();
+   return 0;
+}
+[23bee033@mepcolinux ~]$c++ fndclass.cpp
+[23bee033@mepcolinux ~]$./a.out
+The average of two nos is 25
+The maximum no is 40[23bee033@mepcolinux ~]$exit
+
+Script done on Mon 08 Sep 2025 11:55:41 AM IST

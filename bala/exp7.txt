@@ -1,0 +1,115 @@
+Script started on Fri 12 Sep 2025 05:31:37 AM IST
+[?1034h[23bee033@mepcolinux ~]$cat octal.cpp
+#include<iostream>
+using namespace std;
+class octal
+{
+   int a[100],Ans,i,len;
+   public:
+   octal operator=(int n)
+  {Ans=0;
+    for(i=0;n>0;i++)
+    {
+       a[i]=n%8;
+       n=n/8;
+    }
+    len=i;
+    for(int j=len-1;j>=0;j--)
+    {
+       Ans=(Ans*10)+a[j];
+    }
+   }
+    void display()
+    {
+      cout<<Ans;
+      cout<<"\n";
+    }
+  };
+   int main()
+{
+   int n1,n2;
+   octal o1,o2,o3;
+   cout<<"enter first decimal no:";
+   cin>>n1;
+   cout<<"enter second decimal no:";
+   cin>>n2;
+   o1=n1;
+   o2=n2;
+   o3=n1+n2;
+   o1.display();
+   o2.display();
+   o3.display();
+   return 0;
+
+}
+[23bee033@mepcolinux ~]$c++ octal.cpp
+[23bee033@mepcolinux ~]$,\[K[K./a.0[Kout
+enter first decimal no:34
+enter second decimal no:32
+42
+40
+102
+[23bee033@mepcolinux ~]$cat polar.cpp
+#include<iostream>
+#include<math.h>
+ using namespace std;
+ class rect;
+ class polar
+   {
+      int m,a;
+      public:
+         void get()
+         {
+            cout<<"enter magnitude and angle";
+            cin>>m>>a;
+         }
+          operator rect();
+    void display()
+         {
+            cout<<m<<"<"<<a<<endl;
+         }
+   };
+ class rect
+  {
+     int rl,img;
+     public:
+     rect()
+     {
+      rl=0;
+      img=0;
+     }
+        rect(int x,int y)
+        {
+         rl=x;
+         img=y;
+        }
+         void display()
+           {
+            cout<<rl<<"+i"<<img<<endl;
+           }
+  };
+polar::operator rect()
+{
+   int aa=m* cos(a*M_PI/180.0);
+   int bb=m* sin(a*M_PI/180.0);
+   return rect(aa,bb);
+}
+ int main()
+    {
+       polar p;
+       p.get();
+       rect r;
+       r=p;
+       p.display();
+       r.display();
+       return 0;
+    }
+[23bee033@mepcolinux ~]$c++ polar.cpp
+[23bee033@mepcolinux ~]$./a.out
+enter magnitude and angle23
+80
+23<80
+3+i22
+[23bee033@mepcolinux ~]$exit
+
+Script done on Fri 12 Sep 2025 05:33:21 AM IST

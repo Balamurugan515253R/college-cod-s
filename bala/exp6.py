@@ -1,0 +1,91 @@
+l1=[int(i) for i in list(input("Enter list: ").split())]
+print("Result: ",tuple(l1))
+[23bee033@mepcolinux sem6]$python3 exp6_1.py
+Enter list: 1 2 3 4 5 6
+Result:  (1, 2, 3, 4, 5, 6)
+[23bee033@mepcolinux sem6]$cat exp6_2.py
+l1=[i for i in list(input("Enter list: ").split())]
+t1=tuple(l1)
+print(t1)
+print(len(t1))
+[23bee033@mepcolinux sem6]$python3 exp6_2.py
+Enter list: 1 2 'Bala' 3.14 6 5.2
+('1', '2', "'Bala'", '3.14', '6', '5.2')
+6
+[23bee033@mepcolinux sem6]$cat exp6_3.py
+t1=tuple(input("Enter list: ").split())
+n=input("Enter element: ")
+if n in t1:
+    print("element is present")
+else:
+    print("element doesn't exist")
+[23bee033@mepcolinux sem6]$python3 exp6_3.py
+Enter list: 2 4 6 8 10 12
+Enter element: 12
+element is present
+[23bee033@mepcolinux sem6]$python3 exp6_3.py
+Enter list: 1 2 3 4 5
+Enter element: 6
+element doesn't exist
+[23bee033@mepcolinux sem6]$cat exp6_4.py
+t1=tuple(input("Enter: ").split())
+l=[]
+for i in t1:
+    if i not in l:
+        l.append(i)
+print("after removing duplicates:",l)
+[23bee033@mepcolinux sem6]$python3 exp6_4.py
+Enter: 1 2 4 8 2 4 7 9 0 2 3 3
+after removing duplicates: ['1', '2', '4', '8', '7', '9', '0', '3']
+[23bee033@mepcolinux sem6]$cat exp6_5.py
+t1=tuple(input("enter tuple 1:").split())
+t2=tuple(input("enter tuple 2:").split())
+l1=[]
+val=(t1,t2)
+print(val)
+for i in val:
+   for j in i:
+      l1.append(j)
+print("after flattening:",tuple(l1))
+[23bee033@mepcolinux sem6]$python3 exp6_5.py
+enter tuple 1:1 2 3 4
+enter tuple 2:5 6 7 8
+(('1', '2', '3', '4'), ('5', '6', '7', '8'))
+after flattening: ('1', '2', '3', '4', '5', '6', '7', '8')
+[23bee033@mepcolinux sem6]$cat exp6_6.py
+t1=tuple(input("enter tuple 1:").split())
+t2=tuple(input("enter tuple 2:").split())
+t=t1+t2
+print("after merging:",t)
+[23bee033@mepcolinux sem6]$python3 exp6_6.py
+enter tuple 1:2 4 6
+enter tuple 2:3 5 7
+after merging: ('2', '4', '6', '3', '5', '7')
+[23bee033@mepcolinux sem6]$cat exp6_7.py
+t1=tuple(input("enter tuple:").split())
+n=int(input("starting range:"))
+m=int(input("ending range:"))
+y=t1[n:m]
+print("after slicing:",y)
+[23bee033@mepcolinux sem6]$python3 exp6_7.py
+enter tuple:1 2 3 4 5 6 7 8 9 0
+starting range:2
+ending range:5
+after slicing: ('3', '4', '5')
+[23bee033@mepcolinux sem6]$cat exp6_8.py
+p=input("enter keyword:")
+l=[]
+while True:
+   x=input()
+   if x==p:
+      break
+   l.append(x)
+print(tuple(l))
+[23bee033@mepcolinux sem6]$python3 exp6_8.py
+enter keyword:x
+1
+4
+5
+x
+('1', '4', '5')
+	

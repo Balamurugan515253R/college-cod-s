@@ -1,0 +1,58 @@
+Script started on Friday 10 May 2024 04:11:28 PM IST
+[?1034h[23bee033@mepcolinux bala]$grep -i "UNix" geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+Unix linux which one you choose.
+uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+[23bee033@mepcolinux bala]$grep -c "unix" geekfile.txt
+2
+[23bee033@mepcolinux bala]$grep -l "unix" *
+geekfile.txt
+[23bee033@mepcolinux bala]$grep -w "unix" geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+[23bee033@mepcolinux bala]$grep -w "unix" geekfile.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgrep -o "unix" geekfile.txt
+unix
+unix
+unix
+unix
+unix
+unix
+[23bee033@mepcolinux bala]$grep -n "unix" geekfile.txt
+1:unix is great os. unix is opensource. unix is free os.
+4:uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+[23bee033@mepcolinux bala]$grep "^unix" geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+[23bee033@mepcolinux bala]$cat contacts.txt
+Bob Jones
+Colin Doe
+Dana David
+Jenny Case
+Leonard Schmidt
+Leslie Smith
+Linda Gray
+Susan Gee
+Terry Jones
+[23bee033@mepcolinux bala]$cat contacts.txt | sort
+Bob Jones
+Colin Doe
+Dana David
+Jenny Case
+Leonard Schmidt
+Leslie Smith
+Linda Gray
+Susan Gee
+Terry Jones
+[23bee033@mepcolinux bala]$cat contacts.txt | sort -r
+Terry Jones
+Susan Gee
+Linda Gray
+Leslie Smith
+Leonard Schmidt
+Jenny Case
+Dana David
+Colin Doe
+Bob Jones
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 10 May 2024 04:19:39 PM IST

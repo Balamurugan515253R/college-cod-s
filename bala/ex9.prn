@@ -1,0 +1,64 @@
+Script started on Wednesday 27 December 2023 03:12:12 PM IST
+[?1034h[23bee033@mepcolinux ~]$cat salery.c
+#include<stdio.h>
+union employee
+{
+   char name[20];
+   int empno;
+   int bp;
+};
+int main()
+{
+   int i,n;
+   float ts;
+   union employee c[60];
+   printf("entre no of employees");
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   {
+      printf("\n enter the name\t");
+      scanf("%s",c[i].name);
+      printf("\nentre the no\t");
+      scanf("%d",&c[i].empno);
+      printf("\nentre the pay\t");
+      scanf("%d",&c[i].bp);
+   }
+   printf("employee detials are\n");
+   for(i=0;i<n;i++)
+   {
+      ts=c[i].bp+0.5*c[i].bp+0.05*c[i].bp;
+      printf("\ntotal\t%0.3f",ts);
+   }
+}
+
+[23bee033@mepcolinux ~]$ccat salery.c[8Pexitclear[Kscript ex8.prn[7P./a.outcc  college.cvi[C[C[C[C[C[C[C[C[C[C[C[6P./a.outcc  college.c[6P./a.outvi  college.ccc[C[C[C[C[C[C[C[C[C[C[C[6P./a.outscript ex8.prncl[Kear[1Pexitcat salery.cc[Kat salery.c[8Pexitclear[Kscript ex8.prn[7P./a.outcc  college.cvi[C[C[C[C[C[C[C[C[C[C[C[6P./a.outcc  college.cvi[C[C[C[C[C[C[C[C[C[C[C[6P./a.outcc  college.cvi[C[C[C[C[C[C[C[C[C[C[Ccc[C[C[C[C[C[C[C[C[C[C[Cvi[C[C[C[C[C[C[C[C[C[C[Ccc[C[C[C[C[C[C[C[C[C[C[Cvi[C[C[C[C[C[C[C[C[C[C[Ccc[C[C[C[C[C[C[C[C[C[C[C[6P./a.outvi  college.ccc[C[C[C[C[C[C[C[C[C[C[C[6P./a.outvi  college.ccc[C[C[C[C[C[C[C[C[C[C[C[6P./a.outscript ex8.prncl[Kear[1Pexitcat salery.cc[K salery.c
+[23bee033@mepcolinux ~]$./a.our
+bash: ./a.our: No such file or directory
+[23bee033@mepcolinux ~]$t[K./a.out
+entre no of employees3
+
+ enter the name	bala
+
+entre the no	2
+
+entre the pay	20000
+
+ enter the name	karthik
+
+entre the no	4
+
+entre the pay	30000
+
+ enter the name	tharun
+
+entre the no	3
+
+entre the pay	100000
+employee detials are
+
+total	31000.000
+total	46500.000
+total	155000.000[23bee033@mepcolinux ~]$exit
+exit
+
+Script done on Wednesday 27 December 2023 03:14:49 PM IST

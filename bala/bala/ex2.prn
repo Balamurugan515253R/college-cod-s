@@ -1,0 +1,52 @@
+Script started on Friday 15 March 2024 03:16:28 PM IST
+[?1034h[23bee033@mepcolinux bala]$cat dates.h[Ksh
+#!/bin|bash
+echo $(date)
+echo "hello$USER"
+echo hostname $(hostname)
+echo working in$(pwd)
+echo hereis this month calender
+cal
+[23bee033@mepcolinux bala]$sh dates.sh
+Fri Mar 15 15:16:53 IST 2024
+hello23bee033
+hostname mepcolinux.mepcoeng.ac.in
+working in/run/media/root/Data/student/eee/ug/be2023/a/23bee033/bala
+hereis this month calender
+     March 2024     
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 [7m15[27m 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31
+[23bee033@mepcolinux bala]$u[Kcat user.sh
+echo $(who -m)
+
+[23bee033@mepcolinux bala]$sh user.sh
+23bee033 pts/141 2024-03-15 15:16
+[23bee033@mepcolinux bala]$sh user.sh[1@cat[C[C[C[C[C[C[C[Csh dates.sh[1@cat[C[C[C[C[C[C[C[C[C[8Pexitcat merged.txtdates.txt user.txt>>merged.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh user.sh>>user.txtdates.sh>>dates.txt[12Puser.sh[1@cat[C[C[C[C[C[C[C[Csh dates.sh[1@cat[C[C[C[C[C[C[C[C[C[8Pexitcat merged.txtdates.txt user.txt>>merged.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh user.sh>>user.txtdates.sh>>dates.txt
+[23bee033@mepcolinux bala]$sh dates.sh>>dates.txt[12Puser.sh[1@cat[C[C[C[C[C[C[C[Csh dates.sh[1@cat[C[C[C[C[C[C[C[C[C[8Pexitcat merged.txtdates.txt user.txt>>merged.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh user.sh>>user.txt
+[23bee033@mepcolinux bala]$sh user.sh>>user.txtdates.sh>>dates.txt[12Puser.sh[1@cat[C[C[C[C[C[C[C[Csh dates.sh[1@cat[C[C[C[C[C[C[C[C[C[8Pexitcat merged.txtdates.txt user.txt>>merged.txt
+[23bee033@mepcolinux bala]$cat dates.txt user.txt>>merged.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Psh user.sh>>user.txtdates.sh>>dates.txt[12Puser.sh[1@cat[C[C[C[C[C[C[C[Csh dates.sh[1@cat[C[C[C[C[C[C[C[C[C[8Pexitcat merged.txt
+Fri Mar 15 15:17:46 IST 2024
+hello23bee033
+hostname mepcolinux.mepcoeng.ac.in
+working in/run/media/root/Data/student/eee/ug/be2023/a/23bee033/bala
+hereis this month calender
+     March 2024     
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 14 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31
+23bee033 pts/141 2024-03-15 15:16
+[23bee033@mepcolinux bala]$rm dates.txt
+[23bee033@mepcolinux bala]$rm usr[Ker.txt
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 15 March 2024 03:18:39 PM IST

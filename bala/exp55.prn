@@ -1,0 +1,133 @@
+Script started on Wed Feb  4 09:10:59 2026
+[?1034h[23bee033@mepcolinux ~]$cat l1.py
+num1=[int(i) for i in input("enter nos separated by space:").split()]
+list1=[i+5 for i in num1]
+print(list1)
+print("Max value:",max(list1))
+print("Min value:",min(list1))
+[23bee033@mepcolinux ~]$python3 l1.py
+enter nos separated by space:2 3 4 5 8 7
+[7, 8, 9, 10, 13, 12]
+Max value: 13
+Min value: 7
+[23bee033@mepcolinux ~]$cat l2.py
+list1=[int(i) for i in input("enter nos separated by space:").split()]
+list2=[]
+for i in list1:
+   if i not in list2:
+      list2.append(i)
+print("After removing duplicates:",list2)
+print("After removing duplicates without preserving order:",list(set(list1)))
+[23bee033@mepcolinux ~]$python l  3 l2.py
+enter nos separated by space:2 2 3 3 5 5 4 6 7
+After removing duplicates: [2, 3, 5, 4, 6, 7]
+After removing duplicates without preserving order: [2, 3, 4, 5, 6, 7]
+[23bee033@mepcolinux ~]$cat l3.py
+list1=[int(i) for i in input("enter first list:").split()]
+list2=[int(i) for i in input("enter second list:").split()]
+if(len(list1) and len(list2) ==0):
+   print("list is empty")
+def common(list1,list2):
+   com=[i for i in list1 if i in list2]
+   if(len(com)==0):
+      print("No common elements")
+   else:
+      print("there is atleast one common element")
+      return(True)
+def remove(list1,n):
+   list1.remove(n)
+   print(list1)
+def add(list1,list2):
+   s=[]
+   for i in range(len(list1)):
+    for j in range(len(list2)):
+     if((list1[i]+list2[j])>40):
+      list3=[list1[i],list2[j]]
+      s.append(list3)
+   print("pairs greater than 40 are")
+   print(s)
+
+common(list1,list2)
+n=int(input("enter  no to remove:"))
+print("after removing no from list1")
+remove(list1,n)
+add(list1,list2)
+[23bee033@mepcolinux ~]$python3 l3.py
+enter first list:23 12 13 26
+enter second list:8 10 7 3
+No common elements
+enter  no to remove:23
+after removing no from list1
+[12, 13, 26]
+pairs greater than 40 are
+[]
+[23bee033@mepcolinux ~]$python3 l3.py
+enter first list:23 34 43 12
+enter second list:12 8 7 2
+there is atleast one common element
+enter  no to remove:23
+after removing no from list1
+[34, 43, 12]
+pairs greater than 40 are
+[[34, 12], [34, 8], [34, 7], [43, 12], [43, 8], [43, 7], [43, 2]]
+[23bee033@mepcolinux ~]$cat l4.py
+list1=[int(i) for i in input("enter nos separated by space:").split()]
+even=[i for i in list1 if i%2==0]
+print("even nos are ",even)
+odd=[i for i in list1 if i%2!=0]
+s=even+odd
+print(s)
+[23bee033@mepcolinux ~]$python3 l4.py
+enter nos separated by space:2 1 43 5 6 7 8 9
+even nos are  [2, 6, 8]
+[2, 6, 8, 1, 43, 5, 7, 9]
+[23bee033@mepcolinux ~]$cay t l5.py
+r=int(input("enter no of rows:"))
+c=int(input("enter no of columns:"))
+mat=[]
+for i in range(r):
+   row=[]
+   for j in range(c):
+      val=int(input("Value:"))
+      row.append(val)
+   mat.append(row)
+print(mat)
+transpose = [[row[i] for row in mat] for i in range(len(mat[0]))]
+print("after transposing:")
+print(transpose)
+[23bee033@mepcolinux ~]$python l5.py
+enter no of rows:3
+enter no of columns:3
+Value:1
+Value:2
+Value:3
+Value:4
+Value:5
+Value:6
+Value:7
+Value:8
+Value:9
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+after transposing:
+[[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+[23bee033@mepcolinux ~]$cat l6.py
+list2=[int(i) for i in input("enter nos separated by space:").split()]
+print(list2)
+n=int(input("starting range:"))
+m=int(input("ending range:"))
+slice1=[ i for i in list2[n:m]]
+print("after slicing:",slice1)
+odd=[i for i in slice1 if i%2!=0]
+even=[i for i in slice1 if i%2==0]
+s=even+odd
+print("after moving odd nos to the end",s)
+[23bee033@mepcolinux ~]$python  3 l6.py
+enter nos separated by space:7 5 1 23 34 45 86 12 18 
+[7, 5, 1, 23, 34, 45, 86, 12, 18]
+starting range:3
+ending range:8
+after slicing: [23, 34, 45, 86, 12]
+after moving odd nos to the end [34, 86, 12, 23, 45]
+[23bee033@mepcolinux ~]$exit
+
+Script done on Wed Feb  4 09:18:27 2026

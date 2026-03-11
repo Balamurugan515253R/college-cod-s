@@ -1,0 +1,190 @@
+Script started on Fri Sep 26 09:02:54 2025
+[?1034h[23bee033@mepcolinux ~]$cate   excpavg.cpp
+#include<iostream>
+using namespace std;
+class average
+{
+   int a,b;
+   public:
+   average(int x,int y)
+   {
+      a=x;
+      b=y;
+   }
+   void calc1()
+   {
+    try{  try
+      { if (b==0)
+         {throw 0;
+         }
+        else
+        {cout<<"The division of two numbers is:"<<a/b<<endl;
+        }
+      }
+      catch(int m)
+      {cout<<"can't divide by zero"<<"\n";
+      throw;}
+   }
+    catch(...)
+    {cout<<"Exception handled \n";}
+   }
+     void calc2()
+     {
+      try
+      {try
+       {
+        if(a<0 || b<0)
+        {throw a;
+        }
+        else
+        {cout<<"THe addition of two numbers is:"<<a+b<<endl;
+        }
+       }
+     catch(int n)
+      {cout<<"Entered no is less than zero"<<"\n";
+       throw;
+      }
+      }
+     catch(...)
+     {cout<<"Exception handled \n";}
+     }
+     };
+   int main()
+   {
+      average a1(10,0);
+      average a2(-6,2);
+      average a3(5,0);
+      a1.calc1();
+      a1.calc2();
+      a2.calc2();
+      a3.calc1();
+       return 0;
+   }
+
+[23bee033@mepcolinux ~]$cc ++ excpavg.cpp
+[23bee033@mepcolinux ~]$./a.out
+can't divide by zero
+Exception handled 
+THe addition of two numbers is:10
+Entered no is less than zero
+Exception handled 
+can't divide by zero
+Exception handled 
+[23bee033@mepcolinux ~]$catexcppupo.cpp[1@ 
+#include<iostream>
+using namespace std;
+class stack
+{
+  int count,i=0,flag=0;
+  int a[3];
+   public:
+  void getdata()
+  {
+     cout<<"Enter the no of elements:";
+     cin>>count;
+     for(i=0;i<count;i++)
+     {
+        cin>>a[i];
+     }
+  }
+  void push()
+  {
+    try{
+       try{
+          if(i<3)
+           {
+              cout<<"Enter a no to push:"<<endl;
+              cin>>a[i];
+              i=i+1;
+              flag=1;
+           }
+          else
+          {throw 0;}
+       }
+     catch(int m)
+     {
+        cout<<"stack overflow \n";
+        throw;
+     }
+    }
+    catch(...)
+    {
+       cout<<"EXCEPTION HANDLED\n";
+    }
+  }
+  void pop()
+  {
+     try{
+        try{
+           i=i-1;
+           if(i<0)
+          {throw 0;}
+           else
+           {
+            cout<<"THe poped element is "<<a[i]<<endl;
+            a[i]='\0';
+            }
+        }
+        catch(int n)
+        {if(i<0 && flag==1)
+           {cout<<"Stack underflow\n";
+           throw;}
+         if(i<0 && flag==0)
+         {cout<<"trying to pop before pushing\n";
+            throw;}
+        }
+     }
+     catch(...)
+     {
+        cout<<"EXCEPTION HANDLED\n";
+     }
+  }
+};
+  int main()
+  {
+     stack s1;
+     s1.getdata();
+     s1.push();
+     s1.push();
+     stack s2,s3;
+     s2.getdata();
+     s2.push();
+     s2.pop();
+     s2.pop();
+     s2.pop();
+     s2.pop();
+     s3.pop();
+     return 0;
+  }
+[23bee033@mepcolinux ~]$c++ exccp  ppupo.cpp
+[01m[Kexcppupo.cpp:5:15:[m[K [01;35m[Kwarning: [m[Knon-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int count,i=0,flag=0;
+[01;32m[K               ^[m[K
+[01m[Kexcppupo.cpp:5:22:[m[K [01;35m[Kwarning: [m[Knon-static data member initializers only available with -std=c++11 or -std=gnu++11 [enabled by default]
+   int count,i=0,flag=0;
+[01;32m[K                      ^[m[K
+[23bee033@mepcolinux ~]$./a.out
+Enter the no of elements:3
+4
+3
+5
+stack overflow 
+EXCEPTION HANDLED
+stack overflow 
+EXCEPTION HANDLED
+Enter the no of elements:4
+2
+4
+5
+7
+stack overflow 
+EXCEPTION HANDLED
+THe poped element is 7
+THe poped element is 5
+THe poped element is 4
+THe poped element is 2
+trying to pop before pushing
+EXCEPTION HANDLED
+[23bee033@mepcolinux ~]$exit
+
+Script done on Fri Sep 26 09:06:16 2025

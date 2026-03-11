@@ -1,0 +1,152 @@
+Script started on Friday 03 May 2024 04:22:44 PM IST
+[?1034h[23bee033@mepcolinux bala]$lan[K[K[Kcat language.sh
+#!/bin/bash
+echo -n "entre the name of the country"
+read country
+echo - "the official language of the $country is"
+case $country in
+   lithuania)
+      echo -n "lithunian"
+      ;;
+   romain)
+      echo -n "romiania"
+      ;;
+   italy)
+      echo -n "italian"
+      ;;
+   *)
+      echo -n "unknown"
+      ;;
+esac
+[23bee033@mepcolinux bala]$sh language.sh
+entre the name of the countryitaly
+- the official language of the italy is
+italian[23bee033@mepcolinux bala]$cat talk.sh
+#!/bin/bash
+echo "please talk to me"
+while :
+do
+   read input_string in
+   case $input_string in
+   hello)
+   echo "hello yourself"
+   ;;
+bye)
+   echo "see you again !"
+   break
+   ;;
+*)
+   echo "sorry , i dont understand"
+   ;;
+   esac
+done
+echo "that is all floaks !"
+
+
+
+
+[23bee033@mepcolinux bala]$sh talk.sh
+please talk to me
+bye
+see you again !
+that is all floaks !
+[23bee033@mepcolinux bala]$cat asmd.sh
+#!/bin/bash
+echo "entre two numbers"
+read a
+read b
+echo "entre choice"
+echo "1.addition
+      2.subraction
+      3.multplication
+      4.division"
+read ch
+case $ch in
+   1)res=`echo $a + $b | bc`
+      ;;
+   2)res=`echo $a - $b | bc`
+      ;;
+   3)res=`echo $a \* $b | bc`
+      ;;
+   4)res=`echo $a / $b | bc`
+      ;;
+esac
+echo "result : $res"
+
+
+[23bee033@mepcolinux bala]$sh asmd.sh
+entre two numbers
+34 
+4
+entre choice
+1.addition
+      2.subraction
+      3.multplication
+      4.division
+3
+result : 12
+[23bee033@mepcolinux bala]$cat files.sh
+#!/bin/bash
+echo "menu"
+echo "1.lower to upper
+2.upper to lower
+3.quit"
+echo "entre your choice"
+read ch
+case "$ch" in
+   1) echo "entre file "
+      read f1
+      if [ -f$f1 ]
+      then
+	 echo "converting lower case to upper case"
+	 tr '[a-z]' '[A-Z]' < $f1
+      else
+	 echo "$f1 does not exists"
+      fi
+      ;;
+   2) echo "entre the file read file"
+      read f1
+      if [ -f$f1 ]
+      then
+	 echo "converting upper case to lower case"
+	 tr '[A-Z]' '[a-z]' < $f1
+      else
+	 echo "$f1 file does not exists"
+      fi
+      ;;
+   3) echo "exit..."
+      exit;;
+esac
+
+[23bee033@mepcolinux bala]$sh files.sh
+menu
+1.lower to upper
+2.upper to lower
+3.quit
+entre your choice
+1
+entre file 
+language.sh
+converting lower case to upper case
+#!/BIN/BASH
+ECHO -N "ENTRE THE NAME OF THE COUNTRY"
+READ COUNTRY
+ECHO - "THE OFFICIAL LANGUAGE OF THE $COUNTRY IS"
+CASE $COUNTRY IN
+   LITHUANIA)
+      ECHO -N "LITHUNIAN"
+      ;;
+   ROMAIN)
+      ECHO -N "ROMIANIA"
+      ;;
+   ITALY)
+      ECHO -N "ITALIAN"
+      ;;
+   *)
+      ECHO -N "UNKNOWN"
+      ;;
+ESAC
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 03 May 2024 04:26:26 PM IST

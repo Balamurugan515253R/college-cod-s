@@ -1,0 +1,164 @@
+Script started on Wed 12 Jun 2024 11:30:53 PM IST
+[?1034h[23bee033@mepcolinux bala]$cat all_file_size.sh
+for file1 in *
+do
+if [ -f "$file1" ];
+   then
+       filesize=$(stat -c %s "$file1")
+if ((filesize > 100));
+then
+echo "The filesize of $file1 is greater than 100"
+
+else
+echo "$file1 has a size of $filesize bytes"
+						            fi
+fi
+done
+[23bee033@mepcolinux bala]$cat all_file_size.sh[1Pall_file_size.sh[1Pall_file_size.sh[1Pll_file_size.sh[1Pall_file_size.shsall_file_size.shhall_file_size.sh all_file_size.sh
+accept.sh has a size of 76 bytes
+The filesize of all_file_size.sh is greater than 100
+The filesize of arg.sh is greater than 100
+The filesize of argue.sh is greater than 100
+The filesize of asmd.sh is greater than 100
+The filesize of checkstring.sh is greater than 100
+The filesize of circle.sh is greater than 100
+clear has a size of 0 bytes
+The filesize of compare is greater than 100
+The filesize of compare_two_file.sh is greater than 100
+The filesize of comp.sh is greater than 100
+The filesize of concad.sh is greater than 100
+The filesize of contacts.txt is greater than 100
+The filesize of dates.sh is greater than 100
+display_directory.sh has a size of 80 bytes
+display_info.sh has a size of 86 bytes
+ex10.prn has a size of 0 bytes
+The filesize of ex1.prn is greater than 100
+The filesize of ex2.prn is greater than 100
+The filesize of ex4.prn is greater than 100
+The filesize of ex5.prn is greater than 100
+The filesize of ex6.prn is greater than 100
+The filesize of ex7.prn is greater than 100
+The filesize of ex8.prn is greater than 100
+The filesize of ex9.prn is greater than 100
+fact.sh has a size of 0 bytes
+The filesize of favt.sh is greater than 100
+The filesize of fibo.sh is greater than 100
+The filesize of file_compare.sh is greater than 100
+filedisplay.sh has a size of 87 bytes
+The filesize of file.sh is greater than 100
+The filesize of file_size.sh is greater than 100
+The filesize of files.sh is greater than 100
+The filesize of geekfile.txt is greater than 100
+The filesize of good.sh is greater than 100
+The filesize of language.sh is greater than 100
+The filesize of leapyear.sh is greater than 100
+linux.txt has a size of 36 bytes
+The filesize of loggedin.sh is greater than 100
+The filesize of mark.sh is greater than 100
+The filesize of merged.txt is greater than 100
+nsd.sh has a size of 85 bytes
+The filesize of odd.sh is greater than 100
+The filesize of payslip.sh is greater than 100
+The filesize of permission.sh is greater than 100
+The filesize of permissions.sh is greater than 100
+The filesize of power.sh is greater than 100
+The filesize of primeno.sh is greater than 100
+The filesize of reverse.sh is greater than 100
+The filesize of sum.sh is greater than 100
+tail3.sh has a size of 52 bytes
+The filesize of talk.sh is greater than 100
+user.sh has a size of 16 bytes
+The filesize of user.txt is greater than 100
+[23bee033@mepcolinux bala]$cat display_directory.sh
+echo "Enter the directory name to list the subdirectories"
+read direc
+ls $direc
+[23bee033@mepcolinux bala]$cat display_directory.sh[1P display_directory.sh[1P display_directory.sh[1P display_directory.shs display_directory.shh display_directory.sh
+Enter the directory name to list the subdirectories
+linux
+fil1  fil2  fil3  linux1  linux2
+[23bee033@mepcolinux bala]$cat display_info.sh
+echo "Enter a filename to display the information"
+read file1
+cat $file1
+ls -l $file1
+[23bee033@mepcolinux bala]$cat display_info.sh[1P display_info.sh[1P display_info.sh[1P display_info.shs display_info.shh display_info.sh
+Enter a filename to display the information
+power.sh
+echo "Enter First Number:"
+read no
+echo "Enter the Number for power:"
+read power
+
+counter=0
+ans=1
+while [ $power -ne $counter ]
+do
+   ans=`expr $ans \* $no`
+   counter=`expr $counter + 1`
+done
+
+echo "$no Power of $power is: $ans"
+
+-rw-r--r--. 1 23bee033 eee-ug-2023a 231 May 17 16:03 power.sh
+[23bee033@mepcolinux bala]$sh display_info.sh[Kcat file_compare.sh
+echo "Enter the filename to be compared"
+read file1
+read file2
+if diff $file1 $file2 > /dev/null;
+then
+      echo " Files are identical and so deleting the second file"
+         rm $file2
+      else
+	    echo "Files are not same"
+	 fi
+[23bee033@mepcolinux bala]$cat file_compare.sh[1Pfile_compare.sh[1Pfile_compare.sh[1Pfile_compare.sh[1Pfile_compare.shsfile_compare.shhfile_compare.sh file_compare.sh
+Enter the filename to be compared
+poer  wer.sh
+fa iles, .sh
+Files are not same
+[23bee033@mepcolinux bala]$cat file_size.sh
+echo "Enter the filename"
+read file1
+filesize=$(ls -lh "$file1" | awk '{print $5}')
+if ((filesize > 100))
+then
+       echo "The filesize is greater than 100"
+    else
+           echo "$file1 has a size of $filesize"
+	fi
+[23bee033@mepcolinux bala]$cat file_size.sh[1P file_size.sh[1P file_size.sh[1P file_size.shs file_size.shh file_size.sh
+Enter the filename
+power.sh
+The filesize is greater than 100
+[23bee033@mepcolinux bala]$cat permissions.sh
+echo "The name of all files having all permissions :"
+read file1
+   if [ -r $file1 -a -w $file1 -a -x $file1 ]
+   then
+         echo "$file1 has all permissions (read, write and execute ). "
+      else
+	    echo "$file1 does not have all permissions"
+	 fi
+[23bee033@mepcolinux bala]$cat permissions.sh[1P permissions.sh[1P permissions.sh[1P permissions.shs permissions.shj permissions.shh permissions.sh[1P permissions.sh[1P permissions.sh[1P permissions.shs permissions.shh permissions.sh
+The name of all files having all permissions :
+p files.sh
+files.sh does not have all permissions
+[23bee033@mepcolinux bala]$sh permissions.sh
+The name of all files having all permissions :
+pw ower.sh
+power.sh does not have all permissions
+[23bee033@mepcolinux bala]$cat ti[Kail3.sh
+echo "Enter the filename"
+read file1
+tail -3 $file1
+[23bee033@mepcolinux bala]$cat tail3.sh[1P tail3.sh[1P tail3.sh[1P tail3.shs tail3.shh tail3.sh
+Enter the filename
+power.sh
+
+echo "$no Power of $power is: $ans"
+
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Wed 12 Jun 2024 11:36:15 PM IST

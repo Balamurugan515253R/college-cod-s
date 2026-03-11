@@ -1,0 +1,130 @@
+Script started on Friday 17 May 2024 04:19:31 PM IST
+[?1034h[23bee033@mepcolinux bala]$cat primeno.sh
+echo “Enter the range:”
+read n
+echo “The Prime num are:”
+m=2
+while [ $m -le $n ]
+do
+   i=2
+   flag=0
+   while [ $i -le `expr $m / 2` ]
+   do
+      if [ `expr $m % $i` -eq 0 ]
+      then
+	 flag=1
+	 break
+      fi
+      i=`expr $i + 1`
+   done
+   if [ $flag -eq 0 ]
+   then
+      echo $m
+   fi
+   m=`expr $m + 1`
+done
+
+[23bee033@mepcolinux bala]$sh primeno.sh
+“Enter the range:”
+10
+“The Prime num are:”
+2
+3
+5
+7
+[23bee033@mepcolinux bala]$cat filedisplay.sh
+for File in *
+do
+   if [ -r $File -a -w $File -a -x $File ]
+then
+   echo $File
+fi
+done
+[23bee033@mepcolinux bala]$sh filedisplay.sh
+bala
+[23bee033@mepcolinux bala]$catpower power[C[C[C[C[C.sh
+echo "Enter First Number:"
+read no
+echo "Enter the Number for power:"
+read power
+
+counter=0
+ans=1
+while [ $power -ne $counter ]
+do
+   ans=`expr $ans \* $no`
+   counter=`expr $counter + 1`
+done
+
+echo "$no Power of $power is: $ans"
+
+[23bee033@mepcolinux bala]$sh power.sh
+Enter First Number:
+2
+Enter the Number for power:
+100
+2 Power of 100 is: 1267650600228229401496703205376
+[23bee033@mepcolinux bala]$cat payslip.sh
+i=“y”
+while [ $i = “y” ]
+do
+   echo “Enter you Basic:”
+   read basic
+   echo “Pay Slip Details:”
+   echo “1. House Rent Allowance:”
+   echo “2. Dearness Allowance:”
+   echo “3. Provident Fund:”
+   echo “Enter your Choice:”
+   read ch
+   case $ch in
+      1) hra=`expr $basic \* 20 / 100`
+	 echo Your HRA is Rs. $hra;;
+      2) da=`expr $basic \* 40 / 100`
+	 echo Your DA is Rs. $da;;
+      3) pf=`expr $basic \* 10 / 100`
+	 echo Your PF is Rs. $pf;;
+      *) echo “Not a valid Choice”;;
+   esac
+   echo “Do you want to Continue?:”
+   read i
+   if [ $i != “y” ] 
+   then
+      exit
+   fi
+done
+[23bee033@mepcolinux bala]$sh plat[Ky[K[K[Kayslip.sh
+“Enter you Basic:”
+10000
+“Pay Slip Details:”
+“1. House Rent Allowance:”
+“2. Dearness Allowance:”
+“3. Provident Fund:”
+“Enter your Choice:”
+1
+Your HRA is Rs. 2000
+“Do you want to Continue?:”
+
+payslip.sh: line 23: [: !=: unary operator expected
+payslip.sh: line 2: [: =: unary operator expected
+[23bee033@mepcolinux bala]$cat reverse.sh
+echo "entre a number "
+read n
+num=0
+while [ $n -gt 0 ]
+do
+   num=$(expr $num \* 10)
+   k=$(expr $n % 10)
+   num=$(expr $num + $k)
+   n=$(expr $n / 10)
+done
+echo "reversed number : $num"
+
+
+[23bee033@mepcolinux bala]$sh reverse.sh
+entre a number 
+12345
+reversed number : 54321
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 17 May 2024 04:23:53 PM IST

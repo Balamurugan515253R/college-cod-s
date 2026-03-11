@@ -1,0 +1,5 @@
+100	run
+98	bala
+75	cat
+55	duriyan
+67	vimalan

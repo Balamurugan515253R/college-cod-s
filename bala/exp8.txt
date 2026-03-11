@@ -1,0 +1,133 @@
+Script started on Wed Mar  4 08:15:10 2026
+[?1034h[23bee033@mepcolinux ~]$cat ex8.py
+n = int(input("Enter the no. of elements:"))
+num=set()
+for i in range(n):
+   num.add(input("Enter the value:"))
+print("Length :",len(num))
+print("Elements in set:")
+for i in num:
+   print(i)
+def check():
+   ch=input("Enter the element to check in set:")
+   if ch in num:
+      print("Element present")
+   else:
+      print("Element not in set")
+check()
+check()
+[23bee033@mepcolinux sem6]$python3 exp8_1.py
+Enter the no. of elements:3
+Enter the value:1
+Enter the value:5
+Enter the value:3
+Length : 3
+Elements in set:
+5
+3
+1
+Enter the element to check in set:5
+Element present
+Enter the element to check in set:7
+Element not in set
+[23bee033@mepcolinux sem6]$cat exp8_2.py
+l1=[i for i in input("enter space separated elements:").split()]
+l2=[]
+for i in l1:
+   if i not in l2:
+      l2.append(i)
+x=set(l2)
+print("set:",x)
+def add(x):
+   a=input("enter a value:")
+   if a in x:
+      print("element already exist!!")
+   else:
+      x.add(a)
+add(x)
+add(x)
+print("set after adding:",x)
+def remove(x):
+   b=input("enter  a value:")
+   if b in x:
+      x.remove(b)
+   else:
+      print("elemnt doesnot exist!!")
+remove(x)
+remove(x)
+print("set after removing:",x)
+
+[23bee033@mepcolinux sem6]$python3 exp8_2.py
+enter space separated elements:1 2 3 4 5
+set: {'5', '3', '4', '1', '2'}
+enter a value:4
+element already exist!!
+enter a value:6
+set after adding: {'5', '3', '4', '6', '1', '2'}
+enter  a value:5
+enter  a value:9
+elemnt doesnot exist!!
+set after removing: {'3', '4', '6', '1', '2'}
+[23bee033@mepcolinux sem6]$cat exp8_3.py
+num1=set()
+num2=set()
+n1=int(input("Enter the no.of elements in set1:"))
+n2=int(input("Enter the no.of elements in set2:"))
+for i in range(n1):
+   num1.add(input("Enter value:"))
+for i in range(n2):
+   num2.add(input("Enter value:"))
+print("Set1:",num1)
+print("Set2:",num2)
+print("Union:",num1.union(num2))
+print("Intersection:",num1.intersection(num2))
+print("Diffrence:",num1.difference(num2))
+
+[23bee033@mepcolinux sem6]$python3 exp8_3.py
+Enter the no.of elements in set1:3
+Enter the no.of elements in set2:3
+Enter value:2
+Enter value:5
+Enter value:6
+Enter value:5
+Enter value:1
+Enter value:7
+Set1: {'2', '5', '6'}
+Set2: {'7', '5', '1'}
+Union: {'6', '1', '2', '7', '5'}
+Intersection: {'5'}
+Diffrence: {'2', '6'}
+[23bee033@mepcolinux sem6]$cat exp8_4.py
+num1=set()
+num2=set()
+n1=int(input("Enter no.of elements in set1:"))
+n2=int(input("Emter no.of elements in set2:"))
+for i in range(n1):
+   num1.add(input("Enter element:"))
+for i in range(n2):
+   num2.add(input("Enter value:"))
+print("Set1:",num1)
+print("Set2:",num2)
+if (num1.issubset(num2)):
+   print("Set1 is subset of set2")
+elif(num2.issubset(num1)):
+   print("Set2 is subset of set1")
+else:
+   print("Neither sets are subset to eachother")
+[23bee033@mepcolinux sem6]$python3 exp8_4.py
+Enter no.of elements in set1:5
+Emter no.of elements in set2:3
+Enter element:1
+Enter element:2
+Enter element:3
+Enter element:4
+Enter element:5
+Enter value:1
+Enter value:2
+Enter value:3
+Set1: {'1', '2', '5', '4', '3'}
+Set2: {'2', '1', '3'}
+Set2 is subset of set1	
+[23bee033@mepcolinux ~]$exit
+
+Script done on Wed Mar  4 08:16:16 2026

@@ -1,0 +1,10 @@
+def fun(x,y):
+  if x==y:
+     return "equal"
+  else:
+     return "not equal"
+a=int(input("enter no 1:"))
+b=int(input("enter no 2:"))
+print(fun(a,b))
+
+

@@ -1,0 +1,114 @@
+Script started on Wed Jan 28 12:49:54 2026
+[?1034h[23bee033@mepcolinux ~]$cat fnmax.py
+a=int(input("enter a="))
+b=int(input("enter b="))
+c=int(input("enter c="))
+def max():
+   if(a>b and a>c):
+      print("a is maximum, a=",a)
+   elif(b>a and b>c):
+      print("b is maximum, b=",b)
+   else:
+      print("c is maximum, c=",c)
+max()
+
+[23bee033@mepcolinux ~]$python fnmax.py
+enter a=2
+enter b=3
+enter c=4
+('c is maximum, c=', 4)
+[23bee033@mepcolinux ~]$catf  fnfact.py
+def facto(n):
+   if(n<0):
+      print("invalid input")
+   else:
+      fact=1
+      for i in range(2,n+1):
+	 fact=fact*i
+   print"factorial =",fact
+facto(5)	 
+
+
+[23bee033@mepcolinux ~]$cat fnfact.pyt[1P[1P[1P[1@p[1@y[1@t[1@h[1@o[1@n
+factorial = 120
+[23bee033@mepcolinux ~]$cat fnswap.py
+def swap(a,b):
+   print"before swapping"
+   print"a =",a,"b =",b
+   a=a+b
+   b=a-b
+   a=a-b
+   print"after swapping"
+   print"a =",a,"b =",b
+   return
+swap(2,5)
+
+[23bee033@mepcolinux ~]$cat fnswap.py[1P[1P[1P[1@p[1@y[1@t[1@h[1@o[1@n
+before swapping
+a = 2 b = 5
+after swapping
+a = 5 b = 2
+[23bee033@mepcolinux ~]$cat power.py
+def mypower(x,y):
+   z=x**y
+   print"x^y =",z
+   return
+mypower(2,5)
+[23bee033@mepcolinux ~]$cat power.pyt[1P[1P[1P[1@p[1@y[1@t[1@h[1@o[1@n
+x^y = 32
+[23bee033@mepcolinux ~]$cat fnprime.py
+n=int(input("enter the number :"))
+def prime(n):
+   a='true'
+   for i in range(2,n):
+      if(n%i==0):
+	 a='false'
+   if(a=='false'):
+      return 0
+   else:
+      return 1
+z=prime(n)
+if(z==0):
+   print("not a prime number")
+else:
+   print("prime number")
+
+
+
+[23bee033@mepcolinux ~]$python   pr  fn  prin me.py
+enter the number :5
+prime number
+[23bee033@mepcolinux ~]$python fnprime.py
+enter the number :4
+not a prime number
+[23bee033@mepcolinux ~]$cat pyt   primefactor.py
+def prime(n):
+   if(n==2):
+      return 1
+   else:
+      for i in range(2,n):
+         if(n%i==0):
+            flag=1
+            break
+         flag=0
+      if(flag==0):
+         return 1
+      else:
+         return 0
+def pf(a):
+   for i in range(2,a+1):
+      if(a%i==0):
+         y=prime(i)
+         if(y==1):
+            print(i)
+b=int(input("enter a number "))
+print("the prime factors are")
+pf(b)
+[23bee033@mepcolinux ~]$cat primefactor.py[1P[1P[1P[1@p[1@y[1@t[1@h[1@o[1@n
+enter a number 12
+the prime factors are
+2
+3
+[23bee033@mepcolinux ~]$exit
+
+Script done on Wed Jan 28 13:01:27 2026

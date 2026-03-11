@@ -1,0 +1,90 @@
+Script started on Friday 31 May 2024 02:47:33 PM IST
+[?1034h[23bee033@mepcolinux bala]$cat good.sh
+hours=`date +%H`
+if [ $hours -le 12 ]
+then
+   echo “Good Morning”
+elif [ $hours -le 16 ]
+then
+   echo "Good Afternoon"
+elif [ $hours -le 20 ]
+then
+   echo "Good Evening"
+else
+   echo “Good Night”
+fi
+
+[23bee033@mepcolinux bala]$sh good.sh
+Good Afternoon
+[23bee033@mepcolinux bala]$cat mark.sh
+echo “Enter 3 Subject marks of a student:”
+read s1 s2 s3
+sum1=`expr $s1 + $s2 + $s3`
+echo “Sum of 3 subjects are:” $sum1
+per=`expr $sum1 / 3`
+echo “Percentage is :” $per
+if [ $per -ge 75 ]
+then
+   echo “Distinction”
+elif [ $per -ge 60 -a $per -lt 75  ]
+then
+   echo “First Class”
+elif [ $per -ge 40 -a $per -lt 59 ]
+then
+   echo "second class"
+else
+   echo "fail"
+fi
+[23bee033@mepcolinux bala]$sh mark.sh
+“Enter 3 Subject marks of a student:”
+12 100 100
+“Sum of 3 subjects are:” 212
+“Percentage is :” 70
+“First Class”
+[23bee033@mepcolinux bala]$cat file.sh
+echo –n “Enter File name:”
+read fname
+if [ -f $fname ]
+then
+   echo 'Last Modification time is'`ls -lt $fname | tr -s " " "," | cut -d "," -f8`
+else
+   echo "File does not exist"
+fi
+[23bee033@mepcolinux bala]$sh file.sh
+–n “Enter File name:”
+geekfile.txt
+Last Modification time is16:10
+[23bee033@mepcolinux bala]$cat checkstring.sh
+echo “Enter File Name:”
+read f
+echo “Enter String:”
+read a
+b=`grep $a $f`;
+if [ $? -eq 0 ]
+then
+   echo “String Found”
+else
+   echo “Not Found”
+fi
+[23bee033@mepcolinux bala]$sh merged.sh
+sh: merged.sh: No such file or directory
+[23bee033@mepcolinux bala]$sh string[K[K[K[K[K[Kcheckstring.sh
+“Enter File Name:”
+merged.txt
+“Enter String:”
+hello
+“String Found”
+[23bee033@mepcolinux bala]$cat loggedin.sh
+cat /etc/passwd>user.txt
+set `wc -l user.txt`
+log=`who | wc -l`
+echo "There are $l users in network"
+echo "There are $log user currently logged in"
+
+[23bee033@mepcolinux bala]$sh loggedin.sh
+There are  users in network
+There are 177 user currently logged in
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 31 May 2024 02:53:35 PM IST

@@ -1,0 +1,98 @@
+Script started on Friday 26 April 2024 04:04:22 PM IST
+[?1034h[23bee033@mepcolinux bala]$cat favt.sh
+#!/bin/bash
+echo "entre a number"
+read num
+fact=1
+while [ $num -gt 1 ]
+do
+   fact=$((fact*num))
+   num=$((num-1))
+done
+echo "factorial of num is:$fact"
+[23bee033@mepcolinux bala]$sh favt.sh
+entre a number
+5
+factorial of num is:120
+[23bee033@mepcolinux bala]$cat fibo sh[K[K[K.sh
+#!/bin/sh
+echo "how many no of terms tobe generated:"
+read n
+x=0
+y=1
+i=2
+echo "fibonacci series up to $ n terms"
+echo "$x"
+echo "$y"
+while [ $i -lt $n ]
+do
+   i=$((i+1))
+   z=$((x+y))
+   echo "$y"
+   x=$y
+   y=$z
+done
+[23bee033@mepcolinux bala]$sh fibo.sh
+how many no of terms tobe generated:
+5
+fibonacci series up to $ n terms
+0
+1
+1
+1
+2
+[23bee033@mepcolinux bala]$cat leapyear.sh
+echo "entre the year"
+read year
+if [ $year -ge 1000 -a $year -le 9999 ]
+then
+   echo "the year $year is a leap year"
+else
+   echo "the $year is not aleap year"
+fi
+
+[23bee033@mepcolinux bala]$sh leapyear.sh
+entre the year
+2006
+the year 2006 is a leap year
+[23bee033@mepcolinux bala]$cat circle./sh[K[K[Ksh
+echo "enter the radius of the circle"
+read radius
+pi=3.14159
+area=$(echo "$pi*($radius^2)"|bc)
+circum=$(echo " (2*$pi*$radius)"|bc)
+echo "area of the circle is :$area"
+echo "circurmference of the circle is :$circum"
+[23bee033@mepcolinux bala]$sh circle.sh
+enter the radius of the circle
+5
+area of the circle is :78.53975
+circurmference of the circle is :31.41590
+[23bee033@mepcolinux bala]$cat sum.sh
+echo "entre the n numbers"
+read n
+i=1
+sum=0
+echo "entre the n number"
+while [ $i -le $n ]
+do
+   read num
+   sum=$(($sum+$num))
+   i=$(($i+1))
+done
+echo "sum of n numbers is:$sum"
+
+[23bee033@mepcolinux bala]$sh sum.sh
+entre the n numbers
+5
+entre the n number
+1
+1
+2
+3
+4
+sum of n numbers is:11
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 26 April 2024 04:09:16 PM IST

@@ -1,0 +1,151 @@
+Script started on Fri 08 Aug 2025 02:55:28 PM IST
+[?1034h[23bee033@mepcolinux ~]$cat arrayobj.cppcopycons.cpp
+#include<iostream>
+using namespace std;
+class stud
+{
+   int regno,collegecode;
+   public:
+   stud(int a,int b)
+   {
+      regno=a;
+      collegecode=b;
+   }
+   stud(stud &x)
+   {
+      collegecode=x.collegecode;
+   }
+   void display()
+   {
+      cout<<"college code:"<<collegecode<<endl;
+   }
+};
+int main()
+{
+   stud s(23,23456);
+   s.display();
+   stud s1(s);
+   stud s2=s;
+   s1.display();
+   s2.display();
+   return 0;
+}
+
+[23bee033@mepcolinux ~]$cat copycons.cpparrayobj.cppcopycons.cpp[1P copycons.cpp[1P copycons.cpp+ copycons.cpp+ copycons.cpp
+[23bee033@mepcolinux ~]$./a.out
+college code:23456
+college code:23456
+college code:23456
+[23bee033@mepcolinux ~]$./a.outc++ copycons.cppat[C[C[C[C[C[C[C[C[C[C[C[C[Carrayobj.cpp
+#include<iostream>
+using namespace std;
+class Student
+{int rno,arrear;
+   char name[50];
+   float gpa;
+ public:
+   void getdata();
+   void printdata();
+   void max(Student s[]);
+   void min(Student s[]);
+};
+void Student::getdata()
+{
+   cout<<"Enter name:";
+   cin>>name;
+   cout<<"enter Roll no:";
+   cin>>rno;
+   cout<<"Enter no of arrears:";
+   cin>>arrear;
+   cout<<"Enter the gpa:";
+   cin>>gpa;
+}
+void Student::printdata()
+{cout<<"Student name:"<<name<<endl;
+   cout<<"roll no:"<<rno<<endl;
+   cout<<"gpa:"<<gpa<<endl;
+   cout<<"No of arrears:"<<arrear<<endl;
+}
+void Student::max(Student s[])
+{int max=0;
+   for(int i=1;i<5;i++)
+   {if(s[i].gpa > max)
+      {
+         max=s[i].gpa;
+      }
+   }
+cout<<"The maximum gpa is "<<max<<"\n";
+}
+void Student::min(Student s[])
+{int min=s[1].gpa;
+   for (int i=1;i<5;i++)
+   {
+     if(s[i].gpa < min)
+     {
+        min=s[i].gpa;
+     }
+   }
+   cout<<"The minimum gpa is "<<min;
+}
+int main()
+{Student s[4];
+   for(int i=1;i<5;i++)
+   {
+   s[i].getdata();
+   cout<<"\n";
+   }
+   for(int i=1;i<5;i++)
+   {
+      s[i].printdata();
+         cout<<"\n";
+   }
+s[1].max(s);
+s[1].min(s);
+return 0;
+}
+[23bee033@mepcolinux ~]$cat arrayobj.cpp[C[C[C[1P arrayobj.cpp[1P arrayobj.cpp+ arrayobj.cpp+ arrayobj.cpp
+[23bee033@mepcolinux ~]$./a.out
+Enter name:bala
+enter Roll no:23
+Enter no of arrears:2
+Enter the gpa:8.2
+
+Enter name:murugam n
+enter Roll no:12
+Enter no of arrears:1
+Enter the gpa:8.9
+
+Enter name:karthik
+enter Roll no:32
+Enter no of arrears:0
+Enter the gpa:9.1
+
+Enter name:vignesh
+enter Roll no:41
+Enter no of arrears:4
+Enter the gpa:7.5
+
+Student name:bala
+roll no:23
+gpa:8.2
+No of arrears:2
+
+Student name:murugan
+roll no:12
+gpa:8.9
+No of arrears:1
+
+Student name:karthik
+roll no:32
+gpa:9.1
+No of arrears:0
+
+Student name:
+roll no:41
+gpa:7.5
+No of arrears:4
+
+The maximum gpa is 9
+The minimum gpa is 7[23bee033@mepcolinux ~]$exit
+
+Script done on Fri 08 Aug 2025 02:58:06 PM IST

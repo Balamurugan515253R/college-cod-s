@@ -1,0 +1,10 @@
+echo "Enter the filename to be compared"
+read file1
+read file2
+if [`diff $file1 $file2 > /dev/null` -eq 0] # difference will return characters if the files are not same, if the files are same returns nothing 
+then
+   echo " Second file will be deleted"
+   rm $file2
+else
+   echo "Files are not same"
+fi

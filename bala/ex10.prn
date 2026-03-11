@@ -1,0 +1,90 @@
+Script started on Wed Mar 11 08:22:30 2026
+[?1034h[23bee033@mepcolinux ~]$cat ex10.prn   py
+cat: ex10.py: No such file or directory
+[23bee033@mepcolinux ~]$cat exp18 0.py
+ass vechicle:
+   def __init__(self,brand,model,hp,year):
+      self.brand=brand
+      self.model=model
+      self.hp=hp
+      self.year=year
+   def display(self):
+      print("Brand:",self.brand)
+      print("Model:",self.model)
+      print("HP:",self.hp)
+      print("year of manufatoring:",self.year)
+x1=vechicle("BMW","M5",360,2018)
+x2=vechicle("Nissan","GTR",400,2012)
+x1.display()
+x2.display()
+[23bee033@mepcolinux sem6]$python3 exp10_1.py
+Brand: BMW
+Model: M5
+HP: 360
+year of manufatoring: 2018
+Brand: Nissan
+Model: GTR
+HP: 400
+year of manufatoring: 2012
+[23bee033@mepcolinux sem6]$cat exp10_2.py
+class counting:
+   objcnt=0
+   def __init__(self):
+      counting.objcnt+=1
+   def display(self):
+      print("objects created:",counting.objcnt)
+c1=counting()
+c1.display()
+c2=counting()
+c3=counting()
+c2.display()
+c3.display()
+[23bee033@mepcolinux sem6]$python3 exp10_2.py
+objects created: 1
+objects created: 3
+objects created: 3
+[23bee033@mepcolinux sem6]$cat exp10_3.py
+class bmi:
+   def __init__(self,name,age,weight,h1,h2):
+      self.name=name
+      self.age=age
+      self.weight=weight
+      self.h1=h1
+      self.h2=h2
+   def get_bmi_result(self):
+      print("Name:",self.name)
+      H=((self.h1*30)+(self.h2*2.5))/100
+      bmi=self.weight/(H**2)
+      if(bmi<18.5):
+       print("Underweight")
+      elif(bmi>=18.5 and bmi<25):
+       print("Normal weight")
+      else:
+       print("obese")
+b1=bmi("Bala",20,61,5,9)
+b1.get_bmi_result()
+b2=bmi("Ram",23,90,5,8)
+b2.get_bmi_result()
+[23bee033@mepcolinux sem6]$python3 exp10_3.py
+Name: Bala
+Normal weight
+Name: Ram
+obese
+[23bee033@mepcolinux sem6]$cat exp10_4.py
+class circle:
+   def __init__(self,r):
+      self.r=r
+   def carea(self):
+      print("Area of circle:",(3.14*self.r*self.r))
+   def cperimeter(self):
+      print("Perimeter of circle:",(2*3.14*self.r))
+c1=circle(3)
+c1.carea()
+c1.cperimeter()
+[23bee033@mepcolinux sem6]$python3 exp10_4.py
+Area of circle: 28.259999999999998
+Perimeter of circle: 18.84
+[23bee033@mepcolinux ~]$exit
+exit
+
+Script done on Wed Mar 11 08:24:17 2026

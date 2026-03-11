@@ -1,0 +1,116 @@
+Script started on Thu 28 Aug 2025 10:10:51 PM IST
+[?1034h[23bee033@mepcolinux ~]$./a.outc++ emf.cat[C[C[C[C[C[C[2P./a.outc++ current.cppat[C[C[C[C[C[C[C[C[C[C[C[C[1Pscript ex4.cppc++ strdel.cpp[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[Cexit[K./a.outc++ emf.c[1Pvi[C[C[C[C[C[Ccurrent.cppfrndfun.cppndclass.cpp[8P./a.outc++ frndfun.cpp[1Pvi[C[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[C[8P./a.outvi fndclass.cpp[1P fndclass.cpp[1P fndclass.cppc fndclass.cppa fndclass.cppt fndclass.cpp
+#include<iostream>
+using namespace std;
+class A
+{
+   int x;
+   public:
+   A(int i)
+   {
+     x=i;
+   }
+   friend class B;
+};
+class B
+{
+   int y;
+   public:
+   B(int j)
+   {
+      y=j;
+   }
+   void maxavg()
+   {
+      A obj1(10);
+      int avg=(obj1.x + y)/2;
+      cout<<"The average of two nos is "<<avg<<"\n";
+      if(obj1.x > y)
+      {
+         cout<<"The maximum no is "<<obj1.x;
+      }
+      else
+      {
+         cout<<"The maximum no is "<<y;
+      }
+   }
+};
+int main()
+{
+   B obj2(40);
+   obj2.maxavg();
+   return 0;
+}
+[23bee033@mepcolinux ~]$cat fndclass.cpp[1P fndclass.cpp[1P fndclass.cpp+ fndclass.cpp+ fndclass.cpp
+[23bee033@mepcolinux ~]$./a.out
+The average of two nos is 25
+The maximum no is 40[23bee033@mepcolinux ~]$f[K
+[23bee033@mepcolinux ~]$
+[23bee033@mepcolinux ~]$./a.outc++ fndclass.cppat[C[C[C[C[C[C[C[C[C[C[C[C[C[9P./a.outc++ emf.cat[C[C[C[C[C[C[2P./a.outc++ current.cppat[C[C[C[C[C[C[C[C[C[C[C[C[1Pscript ex4.cppc++ strdel.cpp[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[C[1@c++[C[C[C[C[C[C[C[C[C[C[C[1Pvi[C[C[C[C[C[C[C[C[C[C[Cexit[K./a.outc++ emf.c[1Pvi[C[C[C[C[C[Ccurrent.cppfrndfun.cpp
+[?1049h[?1h=[1;47r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[47;1H"frndfun.cpp" 31L, 496C[1;1H#include<iostream>
+using namespace std;
+class Distance
+{
+   int feet,inch;
+   public:
+   Distance(int x,int y)
+   {[9;7Hfeet=x;[10;7Hinch=y;
+   }
+   friend void add(Distance s1 ,Distance s2);
+   };
+void add(Distance s1, Distance s2)
+{
+ int feet1=s1.feet + s2.feet;
+ int inch1=s1.inch + s2.inch;
+ feet1=feet1+(inch1/12);
+ if((inch1/12)>=1)
+ {
+    inch1=inch1%12;
+ }
+ cout<<"The added value is:"<<feet1<<"'"<<inch1;
+}
+int main()
+{
+ Distance x1(4,2);
+ Distance x2(5,3);
+ add(x1,x2);
+ return 0;
+}
+[94m~                                                                                                                                                           [33;1H~                                                                                                                                                           [34;1H~                                                                                                                                                           [35;1H~                                                                                                                                                           [36;1H~                                                                                                                                                           [37;1H~                                                                                                                                                           [38;1H~                                                                                                                                                           [39;1H~                                                                                                                                                           [40;1H~                                                                                                                                                           [41;1H~                                                                                                                                                           [42;1H~                                                                                                                                                           [43;1H~                                                                                                                                                           [44;1H~                                                                                                                                                           [45;1H~                                                                                                                                                           [46;1H~                                                                                                                                                           [1;1H[?12l[?25h[?25l[m[47;1H[K[47;1H:[?12l[?25hwq[?25l"frndfun.cpp" 31L, 496C written
+[?1l>[?12l[?25h[?1049l[23bee033@mepcolinux ~]$vi frndfun.cpp[1P frndfun.cpp[1P frndfun.cppc frndfun.cppa frndfun.cppt frndfun.cpp
+#include<iostream>
+using namespace std;
+class Distance
+{
+   int feet,inch;
+   public:
+   Distance(int x,int y)
+   {
+      feet=x;
+      inch=y;
+   }
+   friend void add(Distance s1 ,Distance s2);
+   };
+void add(Distance s1, Distance s2)
+{
+ int feet1=s1.feet + s2.feet;
+ int inch1=s1.inch + s2.inch;
+ feet1=feet1+(inch1/12);
+ if((inch1/12)>=1)
+ {
+    inch1=inch1%12;
+ }
+ cout<<"The added value is:"<<feet1<<"'"<<inch1;
+}
+int main()
+{
+ Distance x1(4,2);
+ Distance x2(5,3);
+ add(x1,x2);
+ return 0;
+}
+[23bee033@mepcolinux ~]$cat frndfun.cpp[1P frndfun.cpp[1P frndfun.cpp+ frndfun.cpp+ frndfun.cpp
+[23bee033@mepcolinux ~]$./a.out
+The added value is:9'5[23bee033@mepcolinux ~]$exit
+
+Script done on Thu 28 Aug 2025 10:13:31 PM IST

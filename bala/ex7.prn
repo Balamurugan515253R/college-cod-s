@@ -1,0 +1,139 @@
+Script started on Wed Feb 18 12:37:08 2026
+[?1034h[23bee033@mepcolinux ~]$cat expython3 exp74.py[1P exp74.py[1@3 exp74.py[10Pcat exp71.py
+d={}
+n=int(input("enter no of elements:"))
+for i in range(n):
+   key=input("Key:")
+   value=input("value:")
+   d[key]=value
+a=list(d.items())
+for j in range(len(a)):
+   for i in range(len(a)-1):
+    if a[i][1] > a[i+1][1]:
+      temp=a[i]
+      a[i]=a[i+1]
+      a[i+1]=temp
+b=dict(a)
+print("ascending order:",b)
+def add(b):
+   key=input("key:")
+   value=input("value:")
+   b[key]=value
+add(b)
+print("after adding:",b)
+b1=list(b.items())
+for j in range(len(b1)):
+ for i in range(len(b1)-1):
+  if b1[i][1] < b1[i+1][1]:
+   temp=b1[i]
+   b1[i]=b1[i+1]
+   b1[i+1]=temp
+print("decending order:",dict(b1))
+[23bee033@mepcolinux ~]$python exp71.py
+enter no of elements:2
+Key:1
+value:2
+Key:3
+value:4
+('ascending order:', {1: 2, 3: 4})
+key:5
+value:6
+('after adding:', {1: 2, 3: 4, 5: 6})
+('decending order:', {1: 2, 3: 4, 5: 6})
+[23bee033@mepcolinux ~]$cat exp72.py
+def getinp():
+   d={}
+   n=int(input("no of element:"))
+   for i in range(1,n+1):
+         key=input("key:")
+         value=input("value:")
+         d[key]=value
+   return d
+
+d1=getinp()
+d2=getinp()
+d1.update(d2)
+print(d1)
+def check(d1):
+   x=input("enter a key to check:")
+   if x in d1:
+      print("key exists")
+   else:
+      print("key not found")
+check(d1)
+check(d1)	
+[23bee033@mepcolinux ~]$python exp72.py
+no of element:2
+key:1
+value:2
+key:3
+value:4
+no of element:2
+key:5
+value:6
+key:7
+value:8
+{1: 2, 3: 4, 5: 6, 7: 8}
+enter a key to check:3
+key exists
+enter a key to check:6
+key not found
+[23bee033@mepcolinux ~]$cat exp73.py
+d={}
+n=int(input("enter range:"))
+for i in range(1,n+1):
+   d[i]=i**2
+print(d)
+a=d.values()
+print("sum:",sum(a))
+[23bee033@mepcolinux ~]$python exp73.py
+enter range:2
+{1: 1, 2: 4}
+('sum:', 5)
+[23bee033@mepcolinux ~]$python exp73.py
+enter range:4
+{1: 1, 2: 4, 3: 9, 4: 16}
+('sum:', 30)
+[23bee033@mepcolinux ~]$cat exp7. 4.py
+def add():
+   d={}
+   n=int(input("enter no of elements:"))
+   for i in range(n):
+      key=input("key:")
+      value=input("value:")
+      d[key]=value
+   return d
+d1=add()
+print("dict1:",d1)
+d2=add()
+print("dict2:",d2)
+m2= {**d1,**d2}
+print("unpacking method:",m2)
+x=d1
+y=d2
+x.update(y)
+print("update method:",x)
+k1=list(d2.keys())
+k2=list(d2.values())
+for i in range(len(k1)):
+   d1[k1[i]]=k2[i]
+print("Merged using for loop:",d1)
+[23bee033@mepcolinux ~]$python3 exp74.py
+enter no of elements:2
+key:1
+value:2
+key:3
+value:4
+dict1: {'1': '2', '3': '4'}
+enter no of elements:2
+key:5
+value:6
+key:7
+value:8
+dict2: {'5': '6', '7': '8'}
+unpacking method: {'1': '2', '3': '4', '5': '6', '7': '8'}
+update method: {'1': '2', '3': '4', '5': '6', '7': '8'}
+Merged using for loop: {'1': '2', '3': '4', '5': '6', '7': '8'}
+[23bee033@mepcolinux ~]$exit
+
+Script done on Wed Feb 18 12:41:05 2026

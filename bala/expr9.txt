@@ -1,0 +1,97 @@
+Script started on Fri 12 Sep 2025 07:23:52 AM IST
+[?1034h[23bee033@mepcolinux ~]$cat futemp.cpp
+#include<iostream>
+using namespace std;
+template<class b>
+void large(b x,b y)
+{
+ if(x>y)
+ {
+  cout<<" largest element= "<<x<<endl;
+ }
+ else
+ {
+    cout<<" largest element= "<<y<<endl;
+ }
+}
+ int main()
+ {
+    large(5,6);
+    large('a','m');
+    large(7.8,10.2);
+    return 0;
+ }
+[23bee033@mepcolinux ~]$c++ futemp.cpp
+[23bee033@mepcolinux ~]$,[K./a.out
+ largest element= 6
+ largest element= m
+ largest element= 10.2
+[23bee033@mepcolinux ~]$cat cltemp.txt
+cat: cltemp.txt: No such file or directory
+[23bee033@mepcolinux ~]$cat cltemp.cpp
+#include<iostream>
+using namespace std;
+template<class p>
+class stack
+{
+ int i,count;
+ p a[30];
+ public:
+ void get()
+ {
+    cout<<"Enter the no of elements:";
+    cin>>count;
+    for(i=0;i<count;i++)
+    {
+       cin>>a[i];
+    }
+ }
+ void push()
+ {
+    if((i+1)<30)
+    { cout<<"Enter a number to push"<<endl;
+       i=i+1;
+      cin>>a[i];
+    }
+ }
+ void pop()
+ {
+    cout<<"The poped element is "<<a[i]<<endl;
+    a[i]='\0';
+    if(i<0)
+    {
+       cout<<"Stack underflow";
+    }
+ }
+};
+ int main()
+ {
+  stack<int> s1;
+  s1.get();
+  s1.push();
+  s1.pop();
+  stack<float> s2;
+  s2.get();
+  s2.push();
+  s2.pop();
+  return 0;
+ }
+[23bee033@mepcolinux ~]$c++ cltemp.cpp
+[23bee033@mepcolinux ~]$./a.0[Kout
+Enter the no of elements:3
+23
+34
+21
+Enter a number to push
+3
+The poped element is 3
+Enter the no of elements:12  3
+2.3
+3.4
+4.5
+Enter a number to push
+1.2
+The poped element is 1.2
+[23bee033@mepcolinux ~]$exit
+
+Script done on Fri 12 Sep 2025 07:27:06 AM IST

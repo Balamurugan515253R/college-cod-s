@@ -1,0 +1,25 @@
+Script started on Friday 01 March 2024 03:32:34 PM IST
+[?1034h[23bee033@mepcolinux bala]$ls
+ex1.prn  linux.txt
+[23bee033@mepcolinux bala]$ls -a
+.  ..  ex1.prn	linux.txt
+[23bee033@mepcolinux bala]$ls a[K-l
+total 4
+-rw-r--r--. 1 23bee033 eee-ug-2023a  0 Mar  1 15:32 ex1.prn
+-rw-r--r--. 1 23bee033 eee-ug-2023a 36 Mar  1 15:32 linux.txt
+[23bee033@mepcolinux bala]$cd
+[23bee033@mepcolinux ~]$cd bala
+[23bee033@mepcolinux bala]$pwd
+/run/media/root/Data/student/eee/ug/be2023/a/23bee033/bala
+[23bee033@mepcolinux bala]$cat [K[K[K[Kwo[Kho -m
+23bee033 pts/143      2024-03-01 15:32
+[23bee033@mepcolinux bala]$ ca[K[K[Kcat b[K[K[K [Kt linux.txt
+Learning LINUX is quite interesting
+[23bee033@mepcolinux bala]$cat linux.txt[7Pwho -mcat linux.txt[C[C[1P linux.txt[1P linux.txt[1P linux.txtw linux.txtc linux.txt
+ 1  5 36 linux.txt
+[23bee033@mepcolinux bala]$gre p[K[Kp is linux.txt
+Learning LINUX is quite interesting
+[23bee033@mepcolinux bala]$exit
+exit
+
+Script done on Friday 01 March 2024 03:34:50 PM IST

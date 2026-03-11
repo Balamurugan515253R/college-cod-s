@@ -1,0 +1,77 @@
+Script started on Fri Jan  9 20:46:06 2026
+[?1034h[23bee033@mepcolinux ~]$script ex1.prn              cat area.pyy 
+ch=int(input("enter the choice for sidesenter 0 for length,breadth enter 1    "))
+if(ch==0):
+   a=float(input("enter the side 1:"))
+   b=float(input("enter the side 2:"))
+   c=float(input("enter the side 3:"))
+   if(a>0 and b>0 and c>0):
+      s=(a+b+c)/2
+      area=(s*(s-a)*(s-b)*(s-c))**0.5
+      print("area =",area)
+   else:
+      print("invalid input")
+else:
+   l=int(input("enter the length"))
+   b=int(input("enter the breadth"))
+   if(l>0 and b>0):
+      area=(l*b)/2
+      print("area =",area)
+   else:
+      print("invalid input")
+
+
+
+     
+
+[23bee033@mepcolinux ~]$python3 area.py
+enter the choice for sidesenter 0 for length,breadth enter 1    0
+enter the side 1:2
+enter the side 2:3
+enter the side 3:4
+area = 2.9047375096555625
+[23bee033@mepcolinux ~]$cat swap.pt y y
+a=int(input("enter the value of a :"))
+b=int(input("enter the value of b :"))
+print("before swapping")
+print("a =",a)
+print("b =",b)
+a=a+b
+b=a-b
+a=a-b
+print("after swapping")
+print("a =",a)
+print("b =",b)
+
+
+
+[23bee033@mepcolinux ~]$python3 swap.py
+enter the value of a :2
+enter the value of b :5
+before swapping
+a = 2
+b = 5
+after swapping
+a = 5
+b = 2
+[23bee033@mepcolinux ~]$cat simp.py
+p=int(input("enter the principle amount :"))
+r=int(input("enter the rate of intrest :"))
+n=int(input("enter the no of years :"))
+t=int(input("enter the value of t :"))
+si=(p*n*r)/100
+print("simple intrest =",si)
+a=p*(1+((r/n)/100))**(n*t)
+ci=a-p
+print("compound intrest =",ci)
+
+[23bee033@mepcolinux ~]$python3 simp.py
+enter the principle amount :10000
+enter the rate of intrest :5
+enter the no of years :5
+enter the value of t :6
+simple intrest = 2500.0
+compound intrest = 3478.489153329061
+[23bee033@mepcolinux ~]$exit
+
+Script done on Fri Jan  9 20:50:45 2026

@@ -1,0 +1,44 @@
+Script started on Wed Jan 14 13:09:27 2026
+[?1034h[23bee033@mepcolinux ~]$cat greater.py
+a=int(input("enter the no 1 :"))
+b=int(input("enter the no 2 :"))
+c=int(input("enter the no 3 :"))
+if(a>b and a>c):
+   print("a is greater a =",a)
+elif(b>a and b>c):
+   print("b is greater b =",b)
+else:
+   print("c is greater c =",c)
+
+[23bee033@mepcolinux ~]$py[12@cat greater.py[1P[1P[1P[1@p[1@y[1@t[1@h[1@o[1@n
+enter the no 1 :3
+enter the no 2 :4
+enter the no 3 :5
+('c is greater c =', 5)
+[23bee033@mepcolinux ~]$cat sports.py
+T=input("enter the state of temperature :")
+H=input("enter the state of humidity :")
+if(T=="warm" or T=="cold" and H=="dry" or H=="humid"):
+   if(T=="warm" and H=="dry"):
+      print("PLAY BASKET BALL")
+   elif(T=="warm" and H=="humid"):
+      print("PLAY TENNIS")
+   elif(T=="cold" and H=="dry"):
+      print("PLAY CRICKET")
+   elif(T=="cold" and H=="humid"):
+      print("YOU CAN SWIM")
+else:
+   print("invalid")
+	 
+[23bee033@mepcolinux ~]$cat sports.py[1P[1P[1P[1@p[1@y[1@t[1@h[1@o[1@n
+enter the state of temperature :warm
+Traceback (most recent call last):
+  File "sports.py", line 1, in <module>
+    T=input("enter the state of temperature :")
+  File "<string>", line 1, in <module>
+NameError: name 'warm' is not defined
+[23bee033@mepcolinux ~]$python sports.py[1P[1P[1@d[1P[1Pp
+bash: pythoports.py: command not found
+[23bee033@mepcolinux ~]$exit
+
+Script done on Wed Jan 14 13:11:11 2026

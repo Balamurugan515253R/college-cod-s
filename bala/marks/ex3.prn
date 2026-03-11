@@ -1,0 +1,68 @@
+Script started on Friday 15 March 2024 04:20:46 PM IST
+[?1034h[23bee033@mepcolinux marks]$cat marklist [K.txt
+100
+98
+75
+55
+67
+88
+85
+77
+[23bee033@mepcolinux marks]$cat namelist.xtx[K[K[Ktxt
+run
+bala
+cat
+duriyan
+vimalan
+rama
+sita
+kabilan
+
+[23bee033@mepcolinux marks]$cat studrep.txt
+bala
+[23bee033@mepcolinux marks]$paste marklist.txt namelist.txt>>mark detials[1Pdetials[C[C[C[C[C[C[C.txt
+[23bee033@mepcolinux marks]$cat markdetials.txt
+100	run
+98	bala
+75	cat
+55	duriyan
+67	vimalan
+88	rama
+85	sita
+77	kabilan
+	
+[23bee033@mepcolinux marks]$head_[K -5mark[K[K[K[K markdetials.txt>>mark1.txt
+[23bee033@mepcolinux marks]$cat mark1.txt
+100	run
+98	bala
+75	cat
+55	duriyan
+67	vimalan
+[23bee033@mepcolinux marks]$tail -n 3 markdetials.txt>>mark2.txt
+[23bee033@mepcolinux marks]$cat mark2.txt
+85	sita
+77	kabilan
+	
+[23bee033@mepcolinux marks]$sed -n sing[K[K[K[K[K '4,8p' markdetials.txt
+55	duriyan
+67	vimalan
+88	rama
+85	sita
+77	kabilan
+[23bee033@mepcolinux marks]$sed -n '4,8p' markdetials.txt>>mark3.txt
+[23bee033@mepcolinux marks]$cat mark3.txt
+55	duriyan
+67	vimalan
+88	rama
+85	sita
+77	kabilan
+[23bee033@mepcolinux marks]$cat -n mark3.txt
+     1	55	duriyan
+     2	67	vimalan
+     3	88	rama
+     4	85	sita
+     5	77	kabilan
+[23bee033@mepcolinux marks]$exit
+exit
+
+Script done on Friday 15 March 2024 04:28:25 PM IST

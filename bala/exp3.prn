@@ -1,0 +1,92 @@
+Script started on Wed Jan 21 12:51:14 2026
+[?1034h[23bee033@mepcolinux ~]$cat mul.py
+for i in range(1500,1701):
+   if(i%7==0 and i%5==0):
+      print(i)
+	   
+[23bee033@mepcolinux ~]$python mul.py
+1505
+1540
+1575
+1610
+1645
+1680
+[23bee033@mepcolinux ~]$cat pattern.py
+n=int(input("enter count:"))
+l=n-1
+for i in range(1,n+1):
+   print(l*" "+i*"* ")
+   l=l-1
+l=n-1
+for i in range(1,n+1):
+ print(i*" "+l*"* ")
+ l=l-1
+[23bee033@mepcolinux ~]$python pattern.py
+enter count:5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+     
+[23bee033@mepcolinux ~]$cat prime.py
+n=int(input("enter a number:"))
+if(n==2):
+   print("prime no")
+else:
+  for i in range(2,n):
+    if(n%2==0):
+     flag=1
+     break
+    flag=0
+  if(flag==0):
+   print("prime no")
+  else:
+   print("not a prime no")
+[23bee033@mepcolinux ~]$python prime.py
+enter a number:5
+prime no
+[23bee033@mepcolinux ~]$cat fibo.py
+a=0
+b=1
+c=1
+print(a)
+while(c<50):
+   print(c)
+   c=a+b
+   a=b
+   b=c
+[23bee033@mepcolinux ~]$python fibo.py
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+[23bee033@mepcolinux ~]$cat binary.py
+n=str(input("enter comma separated binary number:"))
+t=","
+x=n.split(t)
+l=[]
+print(x)
+for i in x:
+   if int(i,2)%5==0:
+     l.append(i)
+print("The binary numbers divisible by 5 are:")
+print(l)
+[23bee033@mepcolinux ~]$python b  3 binary.py
+enter comma separated binary number:1111,1010,0101
+['1111', '1010', '0101']
+The binary numbers divisible by 5 are:
+['1111', '1010', '0101']
+[23bee033@mepcolinux ~]$exit
+
+Script done on Wed Jan 21 12:54:35 2026

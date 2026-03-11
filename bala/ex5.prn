@@ -1,0 +1,79 @@
+Script started on Wed Feb  4 08:24:08 2026
+[?1034h[23bee033@mepcolinux ~]$cat l1.py
+num1=[int(i) for i in input("enter nos separated by space:").split()]
+list1=[i+5 for i in num1]
+print(list1)
+print("Max value:",max(list1))
+print("Min value:",min(list1))
+[23bee033@mepcolinux ~]$python3 l1.py
+enter nos separated by space:2 3 4 5 6
+[7, 8, 9, 10, 11]
+Max value: 11
+Min value: 7
+[23bee033@mepcolinux ~]$cat l2.py
+list1=[int(i) for i in input("enter nos separated by space:").split()]
+list2=[]
+for i in list1:
+   if i not in list2:
+      list2.append(i)
+print("After removing duplicates:",list2)
+print("After removing duplicates without preserving order:",list(set(list1)))
+[23bee033@mepcolinux ~]$python3 l2.py
+enter nos separated by space:2 2 4 4 3 5 6 6
+After removing duplicates: [2, 4, 3, 5, 6]
+After removing duplicates without preserving order: [2, 3, 4, 5, 6]
+[23bee033@mepcolinux ~]$cat l3.py
+list1=[int(i) for i in input("enter first list:").split()]
+list2=[int(i) for i in input("enter second list:").split()]
+if(len(list1) and len(list2) ==0):
+   print("list is empty")
+def common(list1,list2):
+   com=[i for i in list1 if i in list2]
+   if(len(com)==0):
+      print("No common elements")
+   else:
+      print("there is atleast one common element")
+      return(True)
+def remove(list1,n):
+   list1.remove(n)
+   print(list1)
+def add(list1,list2):
+   s=[]
+   for i in range(len(list1)):
+    for j in range(len(list2)):
+     if((list1[i]+list2[j])>40):
+      list3=[list1[i],list2[j]]
+      s.append(list3)
+   print("pairs greater than 40 are")
+   print(s)
+
+common(list1,list2)
+n=int(input("enter  no to remove:"))
+print("after removing no from list1")
+remove(list1,n)
+add(list1,list2)
+[23bee033@mepcolinux ~]$python3 l3, .py
+enter first list:2 23   41 18
+enter second list:1 28 8 12 20
+No common elements
+enter  no to remove:8
+after removing no from list1
+Traceback (most recent call last):
+  File "l3.py", line 28, in <module>
+    remove(list1,n)
+  File "l3.py", line 13, in remove
+    list1.remove(n)
+ValueError: list.remove(x): x not in list
+[23bee033@mepcolinux ~]$python3 l3.py[1P
+enter first list:121  23 45 61
+Traceback (most recent call last):
+  File "l3.py", line 1, in <module>
+    list1=[int(i) for i in input("enter first list:").split()]
+  File "<string>", line 1
+    12 23 45 61
+        ^
+SyntaxError: invalid syntax
+[23bee033@mepcolinux ~]$exit
+exit
+
+Script done on Wed Feb  4 08:29:24 2026
